@@ -21,7 +21,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh 'curl -f http://localhost:5000 || exit 1'
+                    sh 'curl -f http://172.17.0.1:5000 || exit 1'
                 }
             }
         }
