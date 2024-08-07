@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        PATH = "/usr/local/bin:$PATH" // Ajusta esta ruta según la instalación de Docker
-    }
     stages {
         stage('Clone Repository') {
             steps {
@@ -21,7 +18,8 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh 'curl -f http://localhost:8080 || exit 1'
+                    // Reemplaza 'your_username' y 'your_api_token' con tus credenciales
+                    sh 'curl -v -u dlavezzari:11a767269b3ba666f989d173dc6024e71f http://172.17.0.1:8080 || exit 1'
                 }
             }
         }
