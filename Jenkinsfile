@@ -21,7 +21,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh 'curl -f http://172.18.0.2:8080 || exit 1'
+                    sh 'curl -f http://172.17.0.1:8080 || exit 1'
                 }
             }
         }
